@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Fruit-Vegetable Classification</h1>
+  <h2>Classified Array:</h2>
+  <ul id="output"></ul>
+
+  <script>
+    const outputList = document.getElementById("output")
+    const array = ["apple", "drumstick", "orange", "sweet potato", "kiwi", "cauliflower", "grape", "pear", "bottle gourd", "snake gourd"]
+
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].length <= 6) {
+        array[i] = `${array[i]} - Fruit`
+      } else {
+        array[i] = `${array[i]} - Vegetable`
+      }
+    }
+
+    for (let i = 0; i < array.length; ++i) {
+      const listItem = document.createElement('li')
+      listItem.innerText = array[i]
+      outputList.appendChild(listItem)
+    }
+  </script>
+</body>
+
+</html>
